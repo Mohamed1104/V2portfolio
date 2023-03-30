@@ -26,8 +26,8 @@ const data = [
   {
     image: "https://i.ibb.co/RQ0364P/Screenshot-2023-03-29-at-22-22-17.png",
     name: "Portfolio",
-    url: "https://marvel-11.netlify.app/",
-    repo: "https://github.com/Mohamed1104/Marvel",
+    url: "https://mohamedabdi.vercel.app/",
+    repo: "https://github.com/Mohamed1104/V2portfolio",
     description:
       "The portfolio your on right now! Created using React, React-router-dom, used mutliple Ui libraries such as react bootstrap also styled to be fully responsive for mobile use",
   },
