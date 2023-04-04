@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Me from "../../assets/images/picture.jpg";
 import "./home.css";
 import TypeIt from "typeit-react";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
+import {
+  CVTooltip,
+  LinkedIntooltip,
+  Githubtooltip,
+  Twittertooltip,
+} from "../../components/Tooltips/homeTooltips";
 import cv from "../../assets/V2CV (1).pdf";
 import {
   AiFillLinkedin,
@@ -11,35 +16,43 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
-function Home() {
-  const CVTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      CV
-    </Tooltip>
-  );
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
-  const LinkedIntooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      LinkedIn
-    </Tooltip>
-  );
-  const Githubtooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Github
-    </Tooltip>
-  );
-  const Twittertooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Twitter
-    </Tooltip>
-  );
+function Home() {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  useEffect(() => {
+    const controls = animate(count, 21, { duration: 6 });
+
+    return controls.stop;
+  }, []);
 
   return (
     <div className="home" id="home">
-      <div className="profile-img">
+      <motion.div
+        className="profile-img"
+        initial={{ scale: 0 }}
+        animate={{ rotate: 360, scale: 1 }}
+        transition={{
+          ease: "linear",
+          duration: 2,
+          x: { duration: 1 },
+        }}
+      >
+        {/* <div className="profile-img"> */}
         <img src={Me} alt="me" />
-      </div>
-      <div className="home-intro">
+        {/* </div> */}
+      </motion.div>
+      <motion.div
+        className="home-intro"
+        animate={{ x: 100 }}
+        transition={{
+          ease: "linear",
+          duration: 2,
+          x: { duration: 1 },
+        }}
+      >
+        {/* <div className="home-intro"> */}
         <h1> Hi 👋, my name is Mohamed Abdi</h1>
         <h2> 🇬🇧 Based in London, England</h2>
         <h2>
@@ -72,7 +85,13 @@ function Home() {
             }}
           />
         </h2>
-        <h2> 📧 mohamed.abdi11@hotmail.co.uk </h2>
+        {/* <h2> 📧 mohamed.abdi11@hotmail.co.uk </h2> */}
+        <div className="age">
+          <h2>🇸🇴 I'm </h2>
+          <motion.h2>{rounded}</motion.h2>
+          <h2> years old</h2>
+        </div>
+
         <div className="media-icons">
           <OverlayTrigger
             placement="bottom"
@@ -131,7 +150,8 @@ function Home() {
             </a>
           </OverlayTrigger>
         </div>
-      </div>
+        {/* </div> */}
+      </motion.div>
     </div>
   );
 }

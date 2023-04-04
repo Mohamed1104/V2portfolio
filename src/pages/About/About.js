@@ -15,7 +15,7 @@ import {
   Jest,
   Python,
   Express,
-} from "../Tooltips/tooltips";
+} from "../../components/Tooltips/tooltips";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import {
   SiJavascript,
