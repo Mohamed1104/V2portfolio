@@ -3,6 +3,21 @@ import "./about.css";
 import { AiFillHtml5 } from "react-icons/ai";
 import { FaCss3Alt, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import {
+  HtmlTooltip,
+  CssTooltip,
+  Reacttooltip,
+  JavaScriptTooltip,
+  TypeScripttooltip,
+  NodeTooltip,
+  PostgresSql,
+  Firebase,
+  Cypress,
+  Jest,
+  Python,
+  Express,
+} from "../Tooltips/tooltips";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import {
   SiJavascript,
   SiTypescript,
   SiPostgresql,
@@ -62,18 +77,90 @@ function About() {
         <div className="tech-stack">
           <h2> Tech Stack </h2>
           <div className="stack">
-            <AiFillHtml5 size={40} className="tech-stack-icons" />
-            <FaCss3Alt size={40} className="tech-stack-icons" />
-            <SiJavascript size={40} className="tech-stack-icons" />
-            <FaReact size={40} className="tech-stack-icons" />
-            <SiTypescript size={40} className="tech-stack-icons" />
-            <FaNodeJs size={40} className="tech-stack-icons" />
-            <SiExpress size={40} className="tech-stack-icons" />
-            <SiPostgresql size={40} className="tech-stack-icons" />
-            <FaPython size={40} className="tech-stack-icons" />
-            <SiFirebase size={40} className="tech-stack-icons" />
-            <SiJest size={40} className="tech-stack-icons" />
-            <SiCypress size={40} className="tech-stack-icons" />
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={HtmlTooltip}
+            >
+              <AiFillHtml5 size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={CssTooltip}
+            >
+              <FaCss3Alt size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={JavaScriptTooltip}
+            >
+              <SiJavascript size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={Reacttooltip}
+            >
+              <FaReact size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={TypeScripttooltip}
+            >
+              <SiTypescript size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={NodeTooltip}
+            >
+              <FaNodeJs size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={Express}
+            >
+              <SiExpress size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={PostgresSql}
+            >
+              <SiPostgresql size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={Firebase}
+            >
+              <FaPython size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={Python}
+            >
+              <SiFirebase size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={Jest}
+            >
+              <SiJest size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 250, hide: 400 }}
+              overlay={Cypress}
+            >
+              <SiCypress size={40} className="tech-stack-icons" />
+            </OverlayTrigger>
           </div>
         </div>
       </div>

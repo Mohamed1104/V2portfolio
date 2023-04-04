@@ -54,17 +54,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 100px;
+        /* flex-wrap: wrap; */
+        /* gap: 100px; */
         margin: 100px; 
         padding: 150px; 
-        height: 100vh;
+        /* height: 100vh; */
         flex-direction: column;
     }
 
 
 .profile-img > img{
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     border-radius: 40px;
     border: 2px solid black
 }
@@ -74,12 +75,21 @@
 }
 
 .home-intro{
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: rgba(255, 255, 255, 0.2);
     padding: 30px;
 
+}
+.home-intro > h1{
+    font-size: 1.7em;
+    padding: 5px;
+}
+
+.home-intro > h2{
+    font-size: 1em;
+    padding: 2.5px;
 }
 }
