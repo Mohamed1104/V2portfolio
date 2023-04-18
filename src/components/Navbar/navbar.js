@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { BsMoonFill } from "react-icons/bs";
+// import { BsMoonFill } from "react-icons/bs";
 import "./navbar.css";
 import logo from "../../assets/images/Screenshot 2023-03-27 at 17.59.46.png";
 import { HashLink as Link } from "react-router-hash-link";
@@ -28,7 +28,7 @@ function Navbarr() {
         <Link to="#contact" smooth>
           <a href="/#">Contact</a>
         </Link>
-        <BsMoonFill />
+        {/* <BsMoonFill /> */}
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
