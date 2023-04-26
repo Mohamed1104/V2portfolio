@@ -22,7 +22,7 @@ function Home() {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   useEffect(() => {
-    const controls = animate(count, 21, { duration: 6 });
+    const controls = animate(count, 22, { duration: 6 });
 
     return controls.stop;
   }, []);
