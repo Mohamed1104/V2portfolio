@@ -57,6 +57,7 @@ nav {
 
 	header nav {
 		position: fixed;
+		z-index: 1;
 		top: -100vh;
 		left: 0;
 		height: 100%;

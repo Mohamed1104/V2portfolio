@@ -20,4 +20,8 @@
         flex-direction: column;
      }
 
+     .contact h2{
+      font-size: 20px;
+     }
+
 }

@@ -9,7 +9,7 @@ import {
   Githubtooltip,
   Twittertooltip,
 } from "../../components/Tooltips/homeTooltips";
-import cv from "../../assets/V2CV (1).pdf";
+import cv from "../../assets/CVV3.pdf";
 import {
   AiFillLinkedin,
   AiFillGithub,
@@ -39,20 +39,17 @@ function Home() {
           x: { duration: 1 },
         }}
       >
-        {/* <div className="profile-img"> */}
         <img src={Me} alt="me" />
-        {/* </div> */}
       </motion.div>
       <motion.div
         className="home-intro"
-        animate={{ x: 100 }}
+        animate={{ x: 10 }}
         transition={{
           ease: "linear",
           duration: 2,
           x: { duration: 1 },
         }}
       >
-        {/* <div className="home-intro"> */}
         <h1> Hi 👋, my name is Mohamed Abdi</h1>
         <h2> 🇬🇧 Based in London, England</h2>
         <h2>
@@ -150,7 +147,6 @@ function Home() {
             </a>
           </OverlayTrigger>
         </div>
-        {/* </div> */}
       </motion.div>
     </div>
   );
