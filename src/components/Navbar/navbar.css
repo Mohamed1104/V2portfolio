@@ -4,7 +4,6 @@ header {
 	justify-content: space-between;
 	height: 80px;
 	padding: 0 2rem;
-	background-color: var(--mainColor);
 	color: var(--textColor);
     /* position: fixed;
 	width: 100%;
@@ -26,7 +25,7 @@ nav a {
 }
 
 nav a:hover {
-	color: var(--secondaryColor);
+	color: var(--mainColor);
 }
 
 header .nav-btn {

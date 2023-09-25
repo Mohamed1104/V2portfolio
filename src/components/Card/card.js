@@ -11,7 +11,7 @@ export default function Cards({ img, title, desc, git, live }) {
   return (
     <Card
       sx={{
-        maxWidth: 345,
+        maxWidth: 400,
         backgroundColor: "rgba(255, 255, 255, 0.2)",
         borderRadius: 5,
       }}
@@ -22,7 +22,7 @@ export default function Cards({ img, title, desc, git, live }) {
           gutterBottom
           variant="h5"
           component="div"
-          sx={{ fontFamily: "Titillium Web", fontSize: 35 }}
+          sx={{ fontFamily: "Titillium Web", fontSize: 35, fontWeight: "bold" }}
         >
           {title}
         </Typography>
